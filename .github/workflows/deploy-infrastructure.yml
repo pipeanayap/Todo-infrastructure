@@ -33,8 +33,8 @@ jobs:
             mkdir keys
             echo "${{ secrets.SSH_PRIVATE_KEY }}" > ./keys/pipe_server
             echo "${{ secrets.SSH_PUBLIC_KEY }}" > ./keys/pipe_server.pub
-            chmod 777 -/keys/pipe_server
-            chmod 777 -/keys/pipe_server.pub
+            chmod 777 ./keys/pipe_server
+            chmod 777 ./keys/pipe_server.pub
       - name: Terraform Init
         run: terraform init
 
