@@ -1,4 +1,4 @@
-name: Deploy Pipe Server
+name: Destroy Pipe Server
 
 on: 
   workflow_dispatch:
