@@ -84,7 +84,7 @@ resource "digitalocean_droplet" "pipe_server_droplet" {
 
 resource "time_sleep" "wait_docker_install" {
     depends_on = [ digitalocean_droplet.pipe_server_droplet ]
-    create_duration = "130s"
+    create_duration = "200s"
 }
 
 resource "null_resource" "init_api" {
