@@ -47,7 +47,7 @@ services:
     image: saraymartinez002/examen_2parcial:latest
     container_name: TodoApi
     expose:
-      - "80"
+      - "3000"
     environment:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -58,17 +58,9 @@ services:
       VIRTUAL_PATH: /
       LETSENCRYPT_HOST: ${DOMAIN}
       LETSENCRYPT_EMAIL: ${USER_EMAIL}
-      
     depends_on:
       mysql:
         condition: service_healthy
-
-  # todo-app:
-  #   image: juanfr97/juan-server-page:latest
-  #   container_name: TodoApp
-  #   expose:
-  #     - "80"
-
 
 volumes:
   mysql_todo_api:
